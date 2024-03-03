@@ -12,7 +12,7 @@ body {
 .avatar {
     margin-top: 25px;
     margin-left: 25px;
-    width: 30px;
+    width: 40px;
     border-radius: 50%;
     grid-column-start: 2;
     grid-column-end: 2;
@@ -26,6 +26,7 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 1;
     padding: 5%;
+    font-weight: 700;
     color: hsl(217, 19%, 35%);
 
 }
@@ -38,6 +39,7 @@ p {
     padding: 5%;
     margin-top: 25px;
     color: hsl(214, 17%, 51%);
+    font-weight: 500;
 
 }
 
@@ -54,13 +56,31 @@ p {
     cursor: pointer;
 }
 
+.share:hover {
+    background-color: hsl(217, 19%, 35%);
+}
+
 .nome {
     grid-column-start: 2;
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 3;
     margin-left: 50px;
-    margin-top: -4px;
+    margin-top: -1px;
+    color: hsl(217, 19%, 35%);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.data {
+    color: hsl(214, 17%, 51%);
+    margin-left: 50px;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    font-size: 13px;
+
 }
 
 .container {
@@ -88,31 +108,128 @@ p {
 .icones {
     display: flex;
     flex-direction: row;
-    background-color: hsl(217, 19%, 35%);
-    width: 150px;
-    border-radius: 5px;
-    font-size: 15px;
-    margin-left: 1100px;
-    margin-top: -100px;
-    gap: 5px;
     align-items: center;
-
-
+    background-color: hsl(217, 19%, 35%);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    margin-left: 1100px;
+    margin-top: -75px;
+    gap: 10px;
+    padding: 10px 30px 10px 30px;
 }
 
 .aparece {
     display: none;
 }
 
-.compartilhar {
-    margin-bottom: 20px;
-
+img {
+    cursor: pointer;
 }
 
-span {
-    background-color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
+.compartilhar {
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 5px;
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: white;
+        align-items: center;
+    }
+
+    .container {
+        box-shadow: none;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        margin-top: 0;
+        width: fit-content;
+        background-color: white;
+        min-height: 100%;
+    }
+
+    .furniture {
+        width: 375px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    h1 {
+        padding: 10% 5% 0% 5%;
+        font-weight: 500;
+        color: hsl(217, 19%, 35%);
+    }
+
+    p {
+        /* padding: 5%; */
+        margin-top: 10px;
+        color: hsl(214, 17%, 51%);
+        font-weight: 500;
+
+    }
+
+    .share {
+        background-color: hsl(210, 46%, 95%);
+        padding: 10px;
+        width: 40px;
+        margin-left: 300px;
+        margin-top: -50px;
+    }
+
+    #sobreposto:hover {
+        background-color: hsl(217, 19%, 35%);
+    }
+
+    .nome {
+        margin-left: 60px;
+        margin-top: -50px;
+        color: hsl(217, 19%, 35%);
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+    .data {
+        color: hsl(214, 17%, 51%);
+        margin-left: 60px;
+        margin-top: -35px;
+        font-size: 13px;
+    }
+
+    .icones {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        align-items: center;
+        background-color: hsl(217, 19%, 35%);
+        width: 375px;
+        height: fit-content;
+        border-radius: 0;
+        margin-left: 0;
+        margin-top: 630px;
+        gap: 15px;
+        padding: 20px 30px 20px 30px;
+    }
+
+    #sobreposto {
+        background-color: hsl(210, 46%, 95%);
+        padding: 7px;
+        width: 30px;
+        margin-left: 110px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .aparece {
+        display: none;
+    }
 }
